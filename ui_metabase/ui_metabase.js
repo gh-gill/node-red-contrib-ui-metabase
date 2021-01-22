@@ -35,38 +35,15 @@ module.exports = function(RED) {
 	 };
          var token = jwt.sign(pl, METABASE_SECRET_KEY);
          var iframeUrl = url + "/embed/dashboard/" + token + "#" +theme +"bordered=" + border +"&titled=" + title;
-         msg.iframeUrl = iframeUrl;
-	 node.send(msg);
+         //msg.iframeUrl = iframeUrl;
+	 //node.send(msg);
 	 var html = String.raw`
-              
-        
 <style>.nr-dashboard-ui_metabase { padding:0; }</style>
 <div style="width:100%; height:100%; display:inline-block;">
     <iframe id="${id}" src="${iframeUrl}" allow="${allow}" style="width:100%; height:100%; overflow:hidden; border:0; display:block">
         Failed to load Web page
     </iframe>
 </div>
-<script>
-(function(scope) {
-    var iframe = document.getElementById("${id}");
-    if (iframe && iframe.contentWindow) {
-        iframe.contentWindow.addEventListener("message", function(e) {
-            scope.send({payload: e.data});
-        });
-    };
-    scope.$watch("msg", function(msg) {
-        if (iframe && msg) {
-           if (msg.url) {
-               iframe.setAttribute("src", msg.url);
-           }
-           if (iframe.contentWindow && msg.payload) {
-                var data = JSON.stringify(msg.payload);
-                iframe.contentWindow.postMessage(data, "${origin}");
-           }
-        }
-    });
-})(scope);
-</script>
 `;
         return html;
     }

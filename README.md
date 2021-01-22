@@ -39,4 +39,4 @@ Or install the node from the Palette section of your Node-RED editor by searchin
 
 ## Exsample flow 
 
-![images](ui_metabase/images/flow.jpg)
+![images](ui_metabase/images/node.jpg)

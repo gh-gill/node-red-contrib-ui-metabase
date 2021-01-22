@@ -2,7 +2,7 @@
   "name": "red-contrib-metabase-ui",
   "version": "1.0.0",
   "description": "Embed Metabase dashboards and queries into node-red ui.",
-  "main": "metabase_ui.js",
+  "main": "metabase_ui/metabase_ui.js",
   "scripts": {
     "test": "echo \\\"Error: no test specified\\\" && exit 1"
   },

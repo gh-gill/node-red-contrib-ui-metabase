@@ -33,8 +33,9 @@ module.exports = function(RED) {
 		  exp: Math.round(Date.now() / 1000) + (expire * 60) // 100 minute expiration
 	 };
          var token = jwt.sign(payload, METABASE_SECRET_KEY);
-         url = METABASE_SITE_URL + "/embed/dashboard/" + token + "#" +theme +"bordered=" + border +"&titled=" + title;
-         var html = String.raw`
+         var url = METABASE_SITE_URL + "/embed/dashboard/" + token + "#" +theme +"bordered=" + border +"&titled=" + title;
+         msg.payload = url;
+	 var html = String.raw`
               
         
 <style>.nr-dashboard-metabase_ui { padding:0; }</style>

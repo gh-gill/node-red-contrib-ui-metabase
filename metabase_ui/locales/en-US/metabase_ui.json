@@ -1,5 +1,5 @@
 {
-    "metabase" : {
+    "metabase_ui" : {
         "label" : {
             "group" : "Group",
             "size" : "Size",

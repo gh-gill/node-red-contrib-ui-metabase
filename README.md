@@ -2,7 +2,7 @@
 
 A simple node to embed Metabase Dashboards and Queries for the Node-RED Dashboard
 
-![images](ui_metabase/images/node.jpg)
+![images](ui_metabase/images/node.jpg1)
 
 These nodes uses jsonwebtoken.
 

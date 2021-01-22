@@ -1,0 +1,34 @@
+<script type="text/html" data-help-name="metabase_ui">
+    <p>Node-RED widget node for embedding Metabase Dashboards</p>
+
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>payload<span class="property-type">object</span></dt>
+        <dd>Trigger to refresh page</dd>
+    </dl>
+    <dl class="message-properties">
+        <dt>url<span class="property-type">object</span></dt>
+        <dd>URL of target Web page</dd>
+        <dt>token<span class="property-type">object</span></dt>
+        <dd>Token from Metabase</dd>
+        <dt>exipre<span class="property-type">object</span></dt>
+        <dd>Expire time in miniutes</dd>
+        <dt>theme<span class="property-type">object</span></dt>
+        <dd>Theme dark or light mode</dd>
+        <dt>title<span class="property-type">object</span></dt>
+        <dd>Title show</dd>
+        <dt>border<span class="property-type">object</span></dt>
+        <dd>Border show</dd>
+    </dl>
+
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt>payload<span class="property-type">object</span></dt>
+        <dd>Request sent to Metabase</dd>
+    </dl>
+
+    <h3>Details</h3>
+    <p>UI widget for embedding Metabase Dashboards using IFrame.</p>
+    <p>URL setting item or <code>url</code> property of an input message specifies
+    the URL of Metabase Server web page on Node-RED dashboard</p>
+</script>

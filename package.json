@@ -2,37 +2,35 @@
   "name": "red-contrib-metabase-ui",
   "version": "1.0.0",
   "description": "Embed Metabase dashboards and queries into node-red ui.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \\\"Error: no test specified\\\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gh-gill/node-red-contrib-metabase-ui.git"
-  },
-  "main": "ui_iframe.js",
+  "author": "GBh",
+  "contributors": [
+    ],
+  "license": "Apache-2.0",
+  "main": "metabase_ui/metabase_ui.js",
   "node-red": {
       "nodes": {
           "metabase_ui": "metabase_ui/metabase_ui.js"
       }
   },
-  "dependencies": {
-    "jsonwebtoken": "^8.5.1"
-  },
   "peerDependencies": {
         "node-red-dashboard": ">2.15.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gh-gill/node-red-contrib-metabase-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gh-gill/node-red-contrib-metabase-ui/issues"
+  },
+  "homepage": "https://github.com/gh-gill/node-red-contrib-metabase-ui#readme",
   "keywords": [
     "node-red",
     "node-red-dashboard",
     "dashboard",
     "metabase",
     "jsonwebtoken"
-  ],
-  "author": "GBh",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/gh-gill/node-red-contrib-metabase-ui/issues"
-  },
-  "homepage": "https://github.com/gh-gill/node-red-contrib-metabase-ui#readme"
+  ],  
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1"
+  }
 }

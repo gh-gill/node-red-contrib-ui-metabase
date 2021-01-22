@@ -1,1 +1,1 @@
-# node-red-contrib-metabase-ui
+# node-red-contrib-ui-metabase

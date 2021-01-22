@@ -18,7 +18,7 @@ Or install the node from the Palette section of your Node-RED editor by searchin
 
 ## configuration
 
-![images](images/config.gif)
+![images](ui_metabase/images/config.gif)
 
 - `Name`    === `Node Name` - Default **Metabase**
 - `URL`     === `Web address of Metabase Server` - Default **http://localhost:3000**
@@ -34,9 +34,9 @@ Or install the node from the Palette section of your Node-RED editor by searchin
 
 ## Usage
 
-![images](images/metabase.gif)
+![images](ui_metabase/images/metabase.gif)
 
 
 ## Exsample flow
 
-![images](images/flow.png)
+![images](ui_metabase/images/flow.png)

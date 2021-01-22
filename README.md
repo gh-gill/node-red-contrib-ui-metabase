@@ -2,6 +2,8 @@
 
 A simple node to embed Metabase Dashboards and Queries for the Node-RED Dashboard
 
+![images](ui_metabase/images/node.jpg)
+
 These nodes uses jsonwebtoken.
 
 ## install
@@ -39,4 +41,4 @@ Or install the node from the Palette section of your Node-RED editor by searchin
 
 ## Exsample flow 
 
-![images](ui_metabase/images/node.jpg)
+

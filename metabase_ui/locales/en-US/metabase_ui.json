@@ -5,6 +5,7 @@
             "size" : "Size",
             "name" : "Name",
             "url" : "URL",
+            "token" : "Token",
             "expire": "Expire",
             "theme": "Theme",
             "title": "Title",

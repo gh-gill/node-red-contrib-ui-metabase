@@ -1,5 +1,5 @@
 {
-  "name": "red-contrib-metabase-ui",
+  "name": "red-contrib-ui-metabase",
   "version": "1.0.0",
   "description": "Embed Metabase dashboards and queries into node-red ui.",
   "author": "GBh",
@@ -17,12 +17,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gh-gill/node-red-contrib-metabase-ui.git"
+    "url": "git+https://github.com/gh-gill/node-red-contrib-ui-metabase.git"
   },
   "bugs": {
-    "url": "https://github.com/gh-gill/node-red-contrib-metabase-ui/issues"
+    "url": "https://github.com/gh-gill/node-red-contrib-ui-metabase/issues"
   },
-  "homepage": "https://github.com/gh-gill/node-red-contrib-metabase-ui#readme",
+  "homepage": "https://github.com/gh-gill/node-red-contrib-ui-metabase#readme",
   "keywords": [
     "node-red",
     "node-red-dashboard",

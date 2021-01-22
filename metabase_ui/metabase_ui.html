@@ -27,30 +27,30 @@
         <input type="text" id="node-input-url">
     </div>
         <div class="form-row">
-        <label for="node-input-token"><i class="fa fa-key"></i> Token</label>
+        <label for="node-input-token"><i class="fa fa-key"></i> <span data-i18n="metabase_ui.label.token"></span></label>
         <input type="text" id="node-input-token" placeholder="xxxxxxxxxxxxxxxxxxxxxxx">
     </div>
     <div class="form-row">
-        <label for="node-input-expire"><i class="fa fa-key"></i> Expire</label>
+        <label for="node-input-expire"><i class="fa fa-key"></i> <span data-i18n="metabase_ui.label.expire"></span></label>
         <input type="number" id="node-input-expire" placeholder="100">
     </div>
     <div class="form-row">
-        <label for="node-input-theme"><i class="fa fa-window-restore"></i> Theme</label>
+        <label for="node-input-theme"><i class="fa fa-window-restore"></i> <span data-i18n="metabase_ui.label.theme"></span></label>
             <select id="node-input-theme">
             <option value="">Light Mode</option>
             <option value="theme=night&">Dark Mode</option>
         </select>
     </div>
     <div class="form-row">
-		<label for="node-input-title"><i class="fa fa-font"></i> Show title</label>
+		<label for="node-input-title"><i class="fa fa-font"></i> <span data-i18n="metabase_ui.label.title"></span></label>
 		<input type="checkbox" id="node-input-title" style="display: inline-block; width: auto; vertical-align: top;">
     </div>
     <div class="form-row">
-		<label for="node-input-border"><i class="fa fa-square-o"></i> Show frame</label>
+		<label for="node-input-border"><i class="fa fa-square-o"></i> <span data-i18n="metabase_ui.label.border"></span></label>
 		<input type="checkbox" id="node-input-border" style="display: inline-block; width: auto; vertical-align: top;">
     </div>
     <div class="form-row">
-        <label for="node-input-name"><i class="fa fa-tag"></i> <span data-i18n="ui_iframe.label.name"></span></label>
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span data-i18n="metabase_ui.label.name"></span></label>
         <input type="text" id="node-input-name">
     </div>
 </script>
@@ -58,7 +58,7 @@
 <script type="text/javascript">
     function mk_conf(NAME) {
 
-        var ICON = "icons/icon.png";
+        var ICON = "icon.png";
 
         var conf = {
             category: 'dashboard',
@@ -79,12 +79,12 @@
                         return valid;
                     }},
                 height: {value: 0},
-                url: {valuie: ""},
-                token  : {value:""},
-	        expire : {value:""},
-                theme  : {value:""},
-                title  : {value:""},
-                border  : {value:""} 
+                url: {value: ""},
+                token: {value:""},
+	        expire: {value:""},
+                theme: {value:""},
+                title: {value:""},
+                border: {value:""} 
             },
             inputs:1,
             outputs:1,

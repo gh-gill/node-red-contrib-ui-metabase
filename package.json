@@ -6,10 +6,10 @@
   "contributors": [
     ],
   "license": "Apache-2.0",
-  "main": "metabase_ui/metabase_ui.js",
+  "main": "ui_metabase/ui_metabase.js",
   "node-red": {
       "nodes": {
-          "metabase_ui": "metabase_ui/metabase_ui.js"
+          "metabase_ui": "ui_metabase/ui_metabase.js"
       }
   },
   "peerDependencies": {

@@ -11,7 +11,7 @@
   limitations under the License.
 -->
 
-<script type="text/html" data-template-name="metabase_ui">
+<script type="text/html" data-template-name="ui_iframe">
     <div class="form-row" id="template-row-group">
         <label for="node-input-group"><i class="fa fa-table"></i> <span data-i18n="ui_iframe.label.group"></span></label>
         <input type="text" id="node-input-group">
@@ -84,5 +84,5 @@
         return conf;
     };
 
-    RED.nodes.registerType("metabase_ui", mk_conf("iframe"));
+    RED.nodes.registerType("ui_iframe", mk_conf("iframe"));
 </script>

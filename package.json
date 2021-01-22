@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "jsonwebtoken": "^8.5.1"
-  }
+  },
   "peerDependencies": {
         "node-red-dashboard": ">2.15.0"
   },

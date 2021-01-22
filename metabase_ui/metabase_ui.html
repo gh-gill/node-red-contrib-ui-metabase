@@ -24,11 +24,30 @@
     </div>
     <div class="form-row">
         <label for="node-input-url"><i class="fa fa-external-link"></i> <span data-i18n="metabase_ui.label.url"></span></label>
-        <input type="text" id="node-input-url">
+        <input type="text" id="node-input-url" placeholder="http://localhost:3000">
+    </div>
+        <div class="form-row">
+        <label for="node-input-token"><i class="fa fa-key"></i> <span data-i18n="metabase_ui.label.token"></span></label>
+        <input type="text" id="node-input-token" placeholder="xxxxxxxxxxxxxxxxxxxxxxx">
     </div>
     <div class="form-row">
-        <label for="node-input-origin"><i class="fa fa-external-link"></i> <span data-i18n="metabase_ui.label.origin"></span></label>
-        <input type="text" id="node-input-origin">
+        <label for="node-input-expire"><i class="fa fa-hourglass-end"></i> <span data-i18n="metabase_ui.label.expire"></span></label>
+        <input type="number" id="node-input-expire" placeholder="100">
+    </div>
+    <div class="form-row">
+        <label for="node-input-theme"><i class="fa fa-window-restore"></i> <span data-i18n="metabase_ui.label.theme"></span></label>
+            <select id="node-input-theme">
+            <option value="">Light Mode</option>
+            <option value="theme=night&">Dark Mode</option>
+        </select>
+    </div>
+    <div class="form-row">
+		<label for="node-input-title"><i class="fa fa-font"></i> <span data-i18n="metabase_ui.label.title"></span></label>
+		<input type="checkbox" id="node-input-title" style="display: inline-block; width: auto; vertical-align: top;">
+    </div>
+    <div class="form-row">
+		<label for="node-input-border"><i class="fa fa-square-o"></i> <span data-i18n="metabase_ui.label.border"></span></label>
+		<input type="checkbox" id="node-input-border" style="display: inline-block; width: auto; vertical-align: top;">
     </div>
     <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> <span data-i18n="metabase_ui.label.name"></span></label>
@@ -60,8 +79,12 @@
                         return valid;
                     }},
                 height: {value: 0},
-                url: {valuie: ""},
-                origin: {value: "*"}
+                url: {value: ""},
+                token: {value:""},
+	        expire: {value:""},
+                theme: {value:""},
+                title: {value:""},
+                border: {value:""} 
             },
             inputs:1,
             outputs:1,
@@ -84,5 +107,5 @@
         return conf;
     };
 
-    RED.nodes.registerType("metabase_ui", mk_conf("iframe"));
+    RED.nodes.registerType("metabase_ui", mk_conf("Metabase"));
 </script>

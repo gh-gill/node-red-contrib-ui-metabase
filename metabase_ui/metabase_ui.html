@@ -13,44 +13,25 @@
 
 <script type="text/html" data-template-name="metabase_ui">
     <div class="form-row" id="template-row-group">
-        <label for="node-input-group"><i class="fa fa-table"></i> <span data-i18n="metabase_ui.label.group"></span></label>
+        <label for="node-input-group"><i class="fa fa-table"></i> <span data-i18n="ui_iframe.label.group"></span></label>
         <input type="text" id="node-input-group">
     </div>
     <div class="form-row" id="template-row-size">
-        <label><i class="fa fa-object-group"></i> <span data-i18n="metabase_ui.label.size"></span></label>
+        <label><i class="fa fa-object-group"></i> <span data-i18n="ui_iframe.label.size"></span></label>
         <input type="hidden" id="node-input-width">
         <input type="hidden" id="node-input-height">
         <button class="editor-button" id="node-input-size"></button>
     </div>
     <div class="form-row">
-        <label for="node-input-url"><i class="fa fa-external-link"></i> <span data-i18n="metabase_ui.label.url"></span></label>
-        <input type="text" id="node-input-url" placeholder="http://localhost:3000">
-    </div>
-        <div class="form-row">
-        <label for="node-input-token"><i class="fa fa-key"></i> <span data-i18n="metabase_ui.label.token"></span></label>
-        <input type="text" id="node-input-token" placeholder="xxxxxxxxxxxxxxxxxxxxxxx">
+        <label for="node-input-url"><i class="fa fa-external-link"></i> <span data-i18n="ui_iframe.label.url"></span></label>
+        <input type="text" id="node-input-url">
     </div>
     <div class="form-row">
-        <label for="node-input-expire"><i class="fa fa-hourglass-end"></i> <span data-i18n="metabase_ui.label.expire"></span></label>
-        <input type="number" id="node-input-expire" placeholder="100">
+        <label for="node-input-origin"><i class="fa fa-external-link"></i> <span data-i18n="ui_iframe.label.origin"></span></label>
+        <input type="text" id="node-input-origin">
     </div>
     <div class="form-row">
-        <label for="node-input-theme"><i class="fa fa-window-restore"></i> <span data-i18n="metabase_ui.label.theme"></span></label>
-            <select id="node-input-theme">
-            <option value="">Light Mode</option>
-            <option value="theme=night&">Dark Mode</option>
-        </select>
-    </div>
-    <div class="form-row">
-		<label for="node-input-title"><i class="fa fa-font"></i> <span data-i18n="metabase_ui.label.title"></span></label>
-		<input type="checkbox" id="node-input-title" style="display: inline-block; width: auto; vertical-align: top;">
-    </div>
-    <div class="form-row">
-		<label for="node-input-border"><i class="fa fa-square-o"></i> <span data-i18n="metabase_ui.label.border"></span></label>
-		<input type="checkbox" id="node-input-border" style="display: inline-block; width: auto; vertical-align: top;">
-    </div>
-    <div class="form-row">
-        <label for="node-input-name"><i class="fa fa-tag"></i> <span data-i18n="metabase_ui.label.name"></span></label>
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span data-i18n="ui_iframe.label.name"></span></label>
         <input type="text" id="node-input-name">
     </div>
 </script>
@@ -79,12 +60,8 @@
                         return valid;
                     }},
                 height: {value: 0},
-                url: {value: ""},
-                token: {value:""},
-	        expire: {value:""},
-                theme: {value:""},
-                title: {value:""},
-                border: {value:""} 
+                url: {valuie: ""},
+                origin: {value: "*"}
             },
             inputs:1,
             outputs:1,
@@ -107,5 +84,5 @@
         return conf;
     };
 
-    RED.nodes.registerType("metabase_ui", mk_conf("Metabase"));
+    RED.nodes.registerType("metabase_ui", mk_conf("iframe"));
 </script>

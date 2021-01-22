@@ -18,29 +18,31 @@ module.exports = function(RED) {
     var count = 0;
     function HTML(config) {
         count++;
-        var id = "nr-db-if"+count;
+        var id = "nr-db-mb"+count;
         var jwt = require("jsonwebtoken");
-        var METABASE_SITE_URL = config.url;
+        var url = config.url ? config.url : "";
         var METABASE_SECRET_KEY = config.token;
 	var expire = config.expire||100;
 	var title = config.title||false;
+	var theme = config.theme||"";
 	var border = config.border||false;
         var allow = "autoplay";
         var origin = "*";
-        var payload = {
+        var pl = {
 		  resource: { dashboard: 1 },
 		  params: {},
 		  exp: Math.round(Date.now() / 1000) + (expire * 60) // 100 minute expiration
 	 };
-         var token = jwt.sign(payload, METABASE_SECRET_KEY);
-         var url = METABASE_SITE_URL + "/embed/dashboard/" + token + "#" +theme +"bordered=" + border +"&titled=" + title;
-         msg.payload = url;
+         var token = jwt.sign(pl, METABASE_SECRET_KEY);
+         var iframeUrl = url + "/embed/dashboard/" + token + "#" +theme +"bordered=" + border +"&titled=" + title;
+         msg.iframeUrl = iframeUrl;
+	 node.send(msg);
 	 var html = String.raw`
               
         
 <style>.nr-dashboard-metabase_ui { padding:0; }</style>
 <div style="width:100%; height:100%; display:inline-block;">
-    <iframe id="${id}" src="${url}" allow="${allow}" style="width:100%; height:100%; overflow:hidden; border:0; display:block">
+    <iframe id="${id}" src="${iframeUrl}" allow="${allow}" style="width:100%; height:100%; overflow:hidden; border:0; display:block">
         Failed to load Web page
     </iframe>
 </div>

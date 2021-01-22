@@ -1,0 +1,14 @@
+{
+    "metabase" : {
+        "label" : {
+            "group" : "Group",
+            "size" : "Size",
+            "name" : "Name",
+            "url" : "URL",
+            "expire": "Expire",
+            "theme": "Theme",
+            "title": "Title",
+            "border": "Border"
+        }
+    }
+}

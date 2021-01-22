@@ -39,6 +39,6 @@ Or install the node from the Palette section of your Node-RED editor by searchin
 ![images](ui_metabase/images/metabase.gif)
 
 
-## Exsample flow 
+## Exsample flow  
 
 

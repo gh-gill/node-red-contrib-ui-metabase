@@ -28,11 +28,21 @@ module.exports = function(RED) {
 	var border = config.border||false;
         var allow = "autoplay";
         var origin = "*";
-        var pl = {
+	    
+	var pl;
+	if (expire != 0) {
+		pl = {
 		  resource: { dashboard: 1 },
 		  params: {},
-		  exp: Math.round(Date.now() / 1000) + (expire * 60) // 100 minute expiration
-	 };
+		  exp: Math.round(Date.now() / 1000) + (expire * 60) //  x minute expiration
+	 	};
+	} else {
+		pl = {
+		  resource: { dashboard: 1 },
+		  params: {}
+	 	};
+	}
+        
          var token = jwt.sign(pl, METABASE_SECRET_KEY);
          var iframeUrl = url + "/embed/dashboard/" + token + "#" +theme +"bordered=" + border +"&titled=" + title;
          //msg.iframeUrl = iframeUrl;

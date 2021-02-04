@@ -21,6 +21,7 @@ module.exports = function(RED) {
         var id = "nr-db-mb"+count;
         var jwt = require("jsonwebtoken");
         var url = config.url ? config.url : "";
+	var db = congig.db||1;
         var METABASE_SECRET_KEY = config.token;
 	var expire = config.expire||100;
 	var title = config.title||false;
@@ -32,7 +33,7 @@ module.exports = function(RED) {
 	var pl;
 	if (expire != 0) {
 		pl = {
-		  resource: { dashboard: 1 },
+		  resource: { dashboard: db },
 		  params: {},
 		  exp: Math.round(Date.now() / 1000) + (expire * 60) //  x minute expiration
 	 	};

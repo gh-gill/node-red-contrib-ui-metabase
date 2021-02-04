@@ -39,7 +39,7 @@ module.exports = function(RED) {
 	 	};
 	} else {
 		pl = {
-		  resource: { dashboard: 1 },
+		  resource: { dashboard: db },
 		  params: {}
 	 	};
 	}

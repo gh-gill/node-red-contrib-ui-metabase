@@ -5,6 +5,7 @@
             "size" : "Size",
             "name" : "Name",
             "url" : "URL",
+            "db" : "Dashboard",
             "token" : "Token",
             "expire": "Expire",
             "theme": "Theme",

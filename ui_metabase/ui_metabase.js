@@ -22,31 +22,44 @@ module.exports = function(RED) {
         var jwt = require("jsonwebtoken");
         var url = config.url ? config.url : "";
 	var resourceNo = Number(config.resourceNo) ||1;
-	var resource = config.resource ||"question";
+	var resourceType = config.resource;
         var METABASE_SECRET_KEY = config.token;
-	var expire = config.expire||100;
+	var expire = Number(config.expire)||0;
 	var title = config.title||false;
 	var theme = config.theme||"";
 	var border = config.border||false;
         var allow = "autoplay";
         var origin = "*";
-	    
+         
 	var pl;
-	if (expire != 0) {
+	if (expire != 0 && resourceType == "question") {
 		pl = {
-		  resource: { resource: resourceNo },
+		  resource: { question: resourceNo },
 		  params: {},
 		  exp: Math.round(Date.now() / 1000) + (expire * 60) //  x minute expiration
 	 	};
-	} else {
-		pl = {
-		  resource: { resource: resourceNo },
-		  params: {}
+	} else if (expire != 0 && resourceType == "dashboard") {
+	       pl = {
+		  resource: { dashboard: resourceNo },
+		  params: {},
+		  exp: Math.round(Date.now() / 1000) + (expire * 60) //  x minute expiration
 	 	};
-	}
+	} else if (expire === 0 && resourceType == "question") {
+	       pl = {
+		  resource: { question: resourceNo },
+		  params: {},
+	 	};
+	} else if (expire === 0 && resourceType == "dashboard") {
+	       pl = {
+		  resource: { dashboard: resourceNo },
+		  params: {},
+	 	}; 	
+       } else {
+       	//nothing
+       }
         
          var token = jwt.sign(pl, METABASE_SECRET_KEY);
-         var iframeUrl = url + "/embed/" + resource + "/" + token + "#" + theme + "bordered=" + border + "&titled=" + title;
+         var iframeUrl = url + "/embed/" + resourceType + "/" + token + "#" + theme + "bordered=" + border + "&titled=" + title;
          //msg.iframeUrl = iframeUrl;
 	 //node.send(msg);
 	 var html = String.raw`

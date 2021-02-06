@@ -46,7 +46,7 @@ module.exports = function(RED) {
 	}
         
          var token = jwt.sign(pl, METABASE_SECRET_KEY);
-         var iframeUrl = url + "/embed/dashboard/" + token + "#" +theme +"bordered=" + border +"&titled=" + title;
+         var iframeUrl = url + "/embed/"+resource"/" + token + "#" +theme +"bordered=" + border +"&titled=" + title;
          //msg.iframeUrl = iframeUrl;
 	 //node.send(msg);
 	 var html = String.raw`

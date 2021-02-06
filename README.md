@@ -22,13 +22,15 @@ Or install the node from the Palette section of your Node-RED editor by searchin
 
 ![images](ui_metabase/images/config.gif)
 
-- `Name`    === `Node Name` - Default **Metabase**
-- `URL`     === `Web address of Metabase Server` - Default **http://localhost:3000**
-- `Token`   === `Token created by Metabase`
-- `Expire`  === `Minuites before link expires` - Default **100**
-- `Theme`   === `Theme mode` - Default **Light mode**
-- `Title `  === `Show title` - Default **false**
-- `Border ` === `Show border` - Default **false**
+- `Name`       === `Node Name` - Default **Metabase**
+- `URL`        === `Web address of Metabase Server` - Default **http://localhost:3000**
+- `Token`      === `Token created by Metabase`
+- `Recource`   === `Question or dashboard`
+- `RecourceNo` === `Recource No. of question or dashboard`
+- `Expire`     === `Minuites before link expires` - Default **0** /Infinity
+- `Theme`      === `Theme mode` - Default **Light mode**
+- `Title `     === `Show title` - Default **false**
+- `Border `    === `Show border` - Default **false**
 
 ## Setup Metabase for embedded applications
 - See online documention from metabase
@@ -39,6 +41,7 @@ Or install the node from the Palette section of your Node-RED editor by searchin
 ![images](ui_metabase/images/metabase.gif)
 
 
-## Exsample flow  
+## Change log:
+- v1.0.6 added recource and recourceNo, with this one can select a dashboard or question
 
 

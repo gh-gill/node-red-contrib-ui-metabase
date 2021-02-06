@@ -27,7 +27,7 @@ Or install the node from the Palette section of your Node-RED editor by searchin
 - `Token`      === `Token created by Metabase`
 - `Recource`   === `Question or dashboard`
 - `RecourceNo` === `Recource No. of question or dashboard`
-- `Expire`     === `Minuites before link expires` - Default **0** /Infinity
+- `Expire`     === `Minuites before link expires` - Default 0 = /Infinity
 - `Theme`      === `Theme mode` - Default **Light mode**
 - `Title `     === `Show title` - Default **false**
 - `Border `    === `Show border` - Default **false**

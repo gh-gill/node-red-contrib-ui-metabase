@@ -6,7 +6,7 @@
             "name" : "Name",
             "url" : "URL",
             "resource" : "Recource",
-            "resourceNo": "ResourceNo."
+            "resourceNo": "ResourceNo.",
             "token" : "Token",
             "expire": "Expire",
             "theme": "Theme",

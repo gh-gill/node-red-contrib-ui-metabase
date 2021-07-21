@@ -43,5 +43,5 @@ Or install the node from the Palette section of your Node-RED editor by searchin
 
 ## Change log:
 - v1.0.6 added recource and recourceNo, with this one can select a dashboard or question
-
+- v1.0.7 added image
 
